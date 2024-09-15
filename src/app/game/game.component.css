@@ -1,0 +1,99 @@
+/* Grid container */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 3px; 
+  justify-content: center;
+  margin: 20px auto;
+  background-color: #bce6cf; 
+  padding: 8px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Individual grid cells */
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #ffffff; 
+  transition: background-color 0.2s, transform 0.2s ease;
+  font-weight: bold;
+}
+
+/* Hover effect user hovers over a cell */
+.cell:hover {
+  background-color: #d1e7ff; 
+  transform: scale(1.1); /* Slightly enlarges the cell */
+}
+
+/* Style for hit cells */
+.cell.hit {
+  background-color: #ff6666; 
+  color: white;
+  border-color: #cc0000; 
+}
+
+/* Style for miss cells */
+.cell.miss {
+  background-color: #cccccc; 
+  color: black;
+  border-color: #888888; 
+}
+
+/* Grid container styling for mobile responsiveness */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+  }
+
+  .cell {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 15px;
+  color: #1231cc;
+}
+button {
+  font-size: 20px;
+  padding: 12px 20px;
+  margin: 20px;
+  background-color: #34b6ca; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+}
+
+button:active {
+  background-color: #003f7f; 
+  transform: scale(0.98); 
+  box-shadow: none;
+}
+ 
+ h1 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  color: #357d23;
+ }

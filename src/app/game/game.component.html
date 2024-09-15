@@ -1,0 +1,14 @@
+<div>
+  <h2 style="color: rgb(73, 163, 120);">Battleship Game</h2>
+  <p style="color: rgb(232, 81, 88);">{{ message }}</p>
+  <div class="grid">
+    <div *ngFor="let row of grid; let rowIndex = index">
+      <div *ngFor="let cell of row; let colIndex = index"
+           class="cell"
+           (click)="attackCell(rowIndex, colIndex)">
+        {{ cell }}
+      </div>
+    </div>
+  </div>
+  <button (click)="resetGame()">Reset Game</button>
+</div>
